@@ -1,0 +1,14 @@
+<nav>
+  <div class="nav-wrapper orange">
+    <a href="#" class="brand-logo">Home</a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li *ngIf="!estaLogueado"><a routerLink="/control/login">Login</a></li>
+      <li *ngIf="!estaLogueado"><a routerLink="/control/logout">Logout</a></li>
+      <li *ngIf="!estaLogueado"><a routerLink="/control/restablecer-pass">restablecer-pass</a></li>
+      <li><a routerLink="/cliente/registro">Registro</a></li>
+      <li><a routerLink="/defecto/buscar">Buscar</a></li>
+
+    </ul>
+  </div>
+</nav>

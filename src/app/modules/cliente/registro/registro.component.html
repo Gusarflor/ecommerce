@@ -1,0 +1,94 @@
+<div class="row justify-content-center align-items-center h-10">
+  <div class="col-lg-8 ofset-lg-2">
+
+    <div class="card-body p-4 p-md-5">
+      <h2 class="titulo">REGISTRO NUEVO USUARIO</h2>
+    <br>
+    <br>
+
+      <form [formGroup]="fgValidator">
+
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            <div class="form-outline">
+              <div class="form-outline">
+                <i class="material-icons prefix">portrait</i>
+                <input type="text" id="documento" formControlName="documento"/>
+                <label for="documento" class="form-label">Documento</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-outline">
+              <i class="material-icons prefix">date_range</i>
+              <input type="date" id="Fecha de Nacimiento" formControlName="Fecha de Nacimiento"/>
+              <label for="Fecha de Nacimiento" class="form-label">Fecha de Nacimiento</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            <div class="form-outline">
+              <i class="material-icons prefix">perm_identity</i>
+              <input type="text" id="nombre" formControlName="nombre"/>
+              <label class="form-label" for="nombre">Nombre</label>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-outline">
+              <i class="material-icons prefix">person</i>
+              <input type="text" id="apellido" formControlName="apellido"/>
+              <label class="form-label" for="apellido">Apellido</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <div class="form-outline">
+              <i class="material-icons prefix">gps_fixed</i>
+              <input type="text" id="direccion" formControlName="direccion"/>
+              <label class="form-label" for="direccion">Direccion</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 mb-2">
+            <div class="form-outline">
+              <i class="material-icons prefix">location_city</i>
+              <input type="text" id="ciudad" formControlName="ciudad"/>
+              <label for="ciudad" class="form-label">Ciudad</label>
+            </div>
+          </div>
+          <div class="col-md-3 mb-2">
+            <div class="form-outline">
+                <i class="material-icons prefix">contact_phone</i>
+                <input type="tel" id="telefono" formControlName="telefono"/>
+                <label class="form-label" for="telefono">Telefono</label>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-outline">
+              <i class="material-icons prefix">email</i>
+              <input type="email" id="email" formControlName="email"/>
+              <label class="form-label" for="documento">email</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="mt-6 pt-2">
+            <button (click)="RegistrarClienteFn()">
+              <input class="btn btn-secondary btn-lg" type="button" value="Registrar"/>
+            </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</div>
+

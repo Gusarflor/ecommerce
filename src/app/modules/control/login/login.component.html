@@ -1,0 +1,55 @@
+<div class="row justify-content-center align-items-center h-10">
+  <div class="col-lg-8 ofset-lg-2">
+
+    <div class="card-body p-4 p-md-5">
+      <h2 class="titulo">INICIAR SESION</h2>
+    <br>
+
+
+    <form [formGroup]="fgValidator">
+
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            <div class="form-outline">
+                <i class="material-icons prefix">portrait</i>
+                <input type="text" id="usuario" formControlName="usuario"/>
+                <label for="usuario" class="form-label">Usuario</label>
+              </div>
+            </div>
+          </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            <div class="form-outline">
+              <i class="material-icons prefix">lock_open</i>
+              <input type="password" id="password" formControlName="password"/>
+              <label class="form-label" for="password">password</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="mt-6 pt-2">
+            <button (click)="LoginClienteFn()">
+              <input class="btn btn-secondary btn-lg" type="button" value="Iniciar Sesion"/>
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6 m6 l6">
+            <p class="margin medium-small"><a routerLink="/cliente/registro">Registrate!</a></p>
+          </div>
+
+          <div class="input-field col s6 m6 l6">
+              <p class="margin right-align medium-small"><a routerLink="/control/restablecer-pass">Has Olvidado tu contraseña?</a></p>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
