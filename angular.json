@@ -34,7 +34,8 @@
             "scripts": [
               "node_modules/materialize-css/dist/js/materialize.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/scripts/materialize-init.js"
+              "src/assets/scripts/materialize-init.js",
+              "src/assets/scripts/funciones-generales.js"
             ]
 
           },

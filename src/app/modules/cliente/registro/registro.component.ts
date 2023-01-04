@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
+declare const mostrarMensaje:any;
+
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
@@ -38,12 +40,12 @@ export class RegistroComponent implements OnInit {
   RegistrarClienteFn(){
 
     if (this.fgValidator.invalid){
-      alert("Registro erroneo");
-      return false;
-    }
+      mostrarMensaje("Registro erroneo");
 
-    alert("Registrando...");
-    return false;
+    } else{
+      mostrarMensaje("Registrando...");
+
+      }
   }
 
   get fgv(){
