@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ControlService {
-  login: any
+  login: any;
   logout: any;
 
   constructor(private router:Router) { }

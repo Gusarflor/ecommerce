@@ -1,6 +1,8 @@
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
+declare const mostrarMensaje:any;
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -28,11 +30,11 @@ export class LoginComponent implements OnInit {
   LoginClienteFn(){
 
     if (this.fgValidator.invalid){
-      alert("Acceso no autorizado");
+      mostrarMensaje("Acceso no autorizado");
       return false;
     }
 
-    alert("Iniciando Sesion...");
+    mostrarMensaje("Iniciando Sesion...");
     return false;
   }
 
