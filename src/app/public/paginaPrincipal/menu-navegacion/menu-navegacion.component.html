@@ -1,19 +1,27 @@
-
 <ul id="slide-out" class="sidenav">
 
   <li>
     <div class="user-view">
       <div class="background">
-        <img src="htpps:materializecss.com/images/office.jpg">
+        <img src="https://cdn4.buysellads.net/uu/1/122891/1666370872-JWT-260x200.jpg">
       </div>
+
+      <a href="#usuario"><img class="circle"
+          src="https://plus.unsplash.com/premium_photo-1669905375312-a848835fb6a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"></a>
+      <a href="#nombre"><span class="white-text name">Nombre usuario</span></a>
+      <a href="#email"><span class="white-text email">email usuario</span></a>
     </div>
 
-  </li>
+    <a class="waves-effect" routerLink="/control/editarPerfil">Editar Perfil</a>
 
-  <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
   <li><div class="divider"></div></li>
-  <li><a class="waves-effect" routerLink="/catalogo/listar-categoria">Categoria</a></li>
-  <li><a class="waves-effect" routerLink="/catalogo/listar-proveedor">Provedor</a></li>
-</ul>
-<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
+  <li><a class="subheader">CATALOGO</a></li>
+
+  <li><a class="waves-effect" routerLink="/catalogo/listar-categoria">Categoria</a></li>
+
+  <li><a class="waves-effect" routerLink="/catalogo/listar-proveedor">Provedor</a></li>
+
+</ul>
+
+<a *ngIf="!estaLogueado" href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>

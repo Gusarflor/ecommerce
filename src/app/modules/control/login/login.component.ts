@@ -30,11 +30,11 @@ export class LoginComponent implements OnInit {
   LoginClienteFn(){
 
     if (this.fgValidator.invalid){
-      mostrarMensaje("Acceso no autorizado");
+      mostrarMensaje("Has olvidado tus datos");
       return false;
     }
 
-    mostrarMensaje("Iniciando Sesion...");
+    mostrarMensaje("Sesion Iniciada...");
     return false;
   }
 

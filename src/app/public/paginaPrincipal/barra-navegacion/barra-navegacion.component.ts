@@ -1,3 +1,4 @@
+import { ControlService } from './../../../services/control.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class BarraNavegacionComponent implements OnInit {
 
   estaLogueado: Boolean=false;
-  role: number = 1;
+  role: number = 0;
 
-  constructor() { }
+  constructor(private services: ControlService) { }
 
   ngOnInit(): void {
   }
