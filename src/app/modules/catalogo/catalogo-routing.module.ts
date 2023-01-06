@@ -13,7 +13,7 @@ const routes: Routes = [
 
   {path:'crear-categoria', component:CrearCategoriaComponent},
   {path:'editar-categoria', component:EditarCategoriaComponent},
-  {path:'eliminar-categoria', component:EliminarCategoriaComponent},
+  {path:'eliminar-categoria/:id', component:EliminarCategoriaComponent},
   {path:'listar-categoria', component:ListarCategoriaComponent},
 
   {path:'crear-proveedor', component:CrearProveedorComponent},

@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
   LoginClienteFn(){
 
     if (this.fgValidator.invalid){
-      mostrarMensaje("Has olvidado tus datos");
+      mostrarMensaje("Rellenar todos los campos");
       return false;
     }
 

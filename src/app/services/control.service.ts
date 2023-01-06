@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 
@@ -8,5 +9,5 @@ export class ControlService {
   login: any;
   logout: any;
 
-  constructor(private router:Router) { }
+  constructor( private http: HttpClient) { }
 }

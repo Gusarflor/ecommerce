@@ -1,1 +1,31 @@
-<p>listar-categoria works!</p>
+
+<table class="responsive-table" id="customers">
+  <thead>
+    <tr>
+      <td>Codigo</td>
+      <td>Nombre</td>
+      <td>Editar</td>
+      <td>Eliminar</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let r de listaRegistros">
+      <td>{{r.codigo}}</td>
+      <td>{{r.nombre}}</td>
+      <td>
+        <a routerLink="/catalogo/editar-categoria/{{r.id}}'" routerLinkActive="router-link-active"  class="waves-effect light-green waves-light  btn"><i class="material-icons right">edit</i>Editar</a>
+      </td>
+      <td>
+        <button class="btn green waves-effect waves-light" type="button">Eliminar
+          <i class="material-icons right">delete</i>
+        </button>
+      </td>
+    </tr>
+
+</table>
+<br>
+<br>
+
+<a routerLink="/catalogo/crear-categoria" class="waves-effect light-green waves-light  btn"><i class="material-icons left">add</i>Nuevo Registro</a>
+
