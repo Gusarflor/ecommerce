@@ -10,7 +10,7 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let r de listaRegistros">
+    <tr *ngFor="let r de listaRegistros | paginate: { itemsPerPage: 5, currentPage: page }">
       <td>{{r.codigo}}</td>
       <td>{{r.nombre}}</td>
       <td>
@@ -24,6 +24,10 @@
     </tr>
 
 </table>
+<br>
+<br>
+
+<pagination-controls (pageChange)="page = $event"></pagination-controls>
 <br>
 <br>
 

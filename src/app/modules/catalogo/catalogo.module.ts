@@ -10,6 +10,7 @@ import { CrearProveedorComponent } from './proveedor/crear-proveedor/crear-prove
 import { EliminarProveedorComponent } from './proveedor/eliminar-proveedor/eliminar-proveedor.component';
 import { EditarProveedorComponent } from './proveedor/editar-proveedor/editar-proveedor.component';
 import { ListarProveedorComponent } from './proveedor/listar-proveedor/listar-proveedor.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ListarProveedorComponent } from './proveedor/listar-proveedor/listar-pr
   ],
   imports: [
     CommonModule,
-    CatalogoRoutingModule
+    CatalogoRoutingModule,
+    NgxPaginationModule
   ]
 })
 export class CatalogoModule { }

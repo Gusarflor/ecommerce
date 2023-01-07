@@ -10,7 +10,11 @@ import { CategoriaService } from 'src/app/services/catalogo/categoria.service';
 })
 export class ListarCategoriaComponent implements OnInit {
 
-  listaRegistros: CategoriaModel[] = [];
+  page:number = 1;
+
+  collection: any[] = [];
+
+  // listaRegistros: CategoriaModel[] = [];
 
   constructor( private services: CategoriaService) { }
 
