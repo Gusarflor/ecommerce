@@ -1,3 +1,4 @@
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrearCategoriaComponent implements OnInit {
 
+  fgValidator!: FormGroup;
+
   constructor() { }
+
+
 
   ngOnInit(): void {
   }
 
-}
+  guardarNuevoRegistro(){
+
+  }
+
+  }

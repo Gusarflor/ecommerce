@@ -17,7 +17,7 @@ const routes: Routes = [
   {path:'listar-categoria', component:ListarCategoriaComponent},
 
   {path:'crear-proveedor', component:CrearProveedorComponent},
-  {path:'editar-proveedor', component:EditarProveedorComponent},
+  {path:'editar-proveedor/:id', component:EditarProveedorComponent},
   {path:'eliminar-proveedor', component:EliminarProveedorComponent},
   {path:'listar-proveedor', component:ListarProveedorComponent}
 

@@ -1,35 +1,48 @@
 
-<table class="responsive-table" id="customers">
-  <thead>
-    <tr>
-      <td>Codigo</td>
-      <td>Nombre</td>
-      <td>Editar</td>
-      <td>Eliminar</td>
-    </tr>
-  </thead>
+  <table class="highlighted" id="customers">
 
-  <tbody>
-    <tr *ngFor="let r de listaRegistros | paginate: { itemsPerPage: 5, currentPage: page }">
-      <td>{{r.codigo}}</td>
-      <td>{{r.nombre}}</td>
-      <td>
-        <a routerLink="/catalogo/editar-categoria/{{r.id}}'" routerLinkActive="router-link-active"  class="waves-effect light-green waves-light  btn"><i class="material-icons right">edit</i>Editar</a>
-      </td>
-      <td>
-        <button class="btn green waves-effect waves-light" type="button">Eliminar
-          <i class="material-icons right">delete</i>
-        </button>
-      </td>
-    </tr>
+    <thead>
+      <tr>
+        <th>Codigo</th>
+        <th>Nombre</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+      </tr>
+    </thead>
 
-</table>
-<br>
-<br>
+    <tbody>
+      <tr *ngFor="let r of listadoRegistros">
+        <td>{{r.codigo}}</td>
+        <td>{{r.nombre}}</td>
+        <td>
+          <a routerLink="/catalogo/listar-categoria/{{r.id}}" routerLinkActive="routerLinkActive" class="waves-effect waves-light btn"><i class="material-icons right">edit</i>Editar</a>
+        </td>
+        <td>
+          <button (click)="(r.id)" class="btn orange waves-effect waves-light" type="button">Eliminar
+            <i class="material-icons right">delete</i>
+          </button>
+        </td>
+      </tr>
+      <!-- <tr>
+        <td>Berglunds snabbköp</td>
+        <td>Christina Berglund</td>
+        <td>Sweden</td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr> -->
+    </tbody>
+
+  </table>
+
+
+
 
 <pagination-controls (pageChange)="page = $event"></pagination-controls>
 <br>
 <br>
 
-<a routerLink="/catalogo/crear-categoria" class="waves-effect light-green waves-light  btn"><i class="material-icons left">add</i>Nuevo Registro</a>
-
+<a routerLink="/catalogo/crear-categoria" class="waves-effect light-green waves-light  btn"><i
+    class="material-icons left">add</i>Nuevo Registro</a>

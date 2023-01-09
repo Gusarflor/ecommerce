@@ -1,7 +1,9 @@
+import { Router } from '@angular/router';
+import { ControlService } from './../../../services/control.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
-declare const mostrarMensaje:any;
+declare const mostrarMensaje: any;
 
 @Component({
   selector: 'app-login',
@@ -11,14 +13,14 @@ declare const mostrarMensaje:any;
 export class LoginComponent implements OnInit {
   fgValidator!: FormGroup;
 
-  constructor( private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private services: ControlService, private router: Router) { }
 
   ngOnInit(): void {
 
     this.FormBuilding();
   }
 
-  FormBuilding(){
+  FormBuilding() {
 
     this.fgValidator = this.fb.group({
       usuario: ['', [Validators.required, Validators.minLength(3)]],
@@ -27,18 +29,19 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  LoginClienteFn(){
+  LoginClienteFn() {
 
-    if (this.fgValidator.invalid){
+    if (this.fgValidator.invalid) {
       mostrarMensaje("Rellenar todos los campos");
       return false;
-    }
+    } else {
 
-    mostrarMensaje("Sesion Iniciada...");
-    return false;
+      mostrarMensaje("Sesion Iniciada...");
+      return false;
+    }
   }
 
-  get fgv(){
+  get fgv() {
     return this.fgValidator.controls;
   };
 
