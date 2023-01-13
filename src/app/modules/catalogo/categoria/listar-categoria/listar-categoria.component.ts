@@ -19,14 +19,14 @@ export class ListarCategoriaComponent implements OnInit {
   ngOnInit(): void {
 
 
- this.rellenarRegistros();
+  this.rellenarRegistros();
   }
 
   rellenarRegistros() {
 
-    this.services.getTodosRegistros().subscribe(
-      collection => {
-        this.listadoRegistros = collection;
+    this.services.listarCategoria().subscribe(
+      registro => {
+        this.listadoRegistros = registro;
         console.log(this.listadoRegistros);
 
       },

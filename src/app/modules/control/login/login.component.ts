@@ -1,3 +1,4 @@
+import { UsuarioService } from './../../../services/usuario.service';
 import { Router } from '@angular/router';
 import { ControlService } from './../../../services/control.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -11,35 +12,50 @@ declare const mostrarMensaje: any;
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
   fgValidator!: FormGroup;
 
-  constructor(private fb: FormBuilder, private services: ControlService, private router: Router) { }
+  constructor(private fb: FormBuilder, private services: ControlService, private router: Router, private usuarioService:UsuarioService) { }
 
   ngOnInit(): void {
 
     this.FormBuilding();
   }
 
+  onSubmit(){
+    this.usuarioService.registrar(this.fgValidator.value)
+
+      .then(response =>{
+        console.log(response);
+
+      })
+      .catch(error => console.log(error));
+  }
+
+
+
   FormBuilding() {
 
     this.fgValidator = this.fb.group({
-      usuario: ['', [Validators.required, Validators.minLength(3)]],
+      email: ['', [Validators.required, Validators.minLength(3)]],
       password: ['', [Validators.required, Validators.minLength(5)]],
 
     });
   }
 
-  LoginClienteFn() {
 
-    if (this.fgValidator.invalid) {
-      mostrarMensaje("Rellenar todos los campos");
-      return false;
-    } else {
+  // LoginClienteFn() {
 
-      mostrarMensaje("Sesion Iniciada...");
-      return false;
-    }
-  }
+  //   if (this.fgValidator.invalid) {
+  //     mostrarMensaje("Rellenar todos los campos");
+  //     return false;
+  //   } else {
+
+
+    //   mostrarMensaje("Sesion Iniciada...");
+    //   return false;
+    // }
+
 
   get fgv() {
     return this.fgValidator.controls;

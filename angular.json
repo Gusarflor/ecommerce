@@ -37,7 +37,6 @@
               "src/assets/scripts/materialize-init.js",
               "src/assets/scripts/funciones-generales.js"
             ]
-
           },
           "configurations": {
             "production": {
@@ -105,6 +104,16 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "ecommerce:build:production",
+            "firebaseProject": "e-commerce-feff8",
+            "firebaseHostingSite": "e-commerce-feff8"
           }
         }
       }

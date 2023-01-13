@@ -15,24 +15,15 @@
         <td>{{r.codigo}}</td>
         <td>{{r.nombre}}</td>
         <td>
-          <a routerLink="/catalogo/listar-categoria/{{r.id}}" routerLinkActive="routerLinkActive" class="waves-effect waves-light btn"><i class="material-icons right">edit</i>Editar</a>
+          <a routerLink="/catalogo/editar-categoria/{{r.id}}" routerLinkActive="routerLinkActive" class="waves-effect waves-light btn"><i class="material-icons right">edit</i>Editar</a>
         </td>
         <td>
           <button (click)="(r.id)" class="btn orange waves-effect waves-light" type="button">Eliminar
-            <i class="material-icons right">delete</i>
+            <i class="material-icons right">send</i>
           </button>
         </td>
       </tr>
-      <!-- <tr>
-        <td>Berglunds snabbköp</td>
-        <td>Christina Berglund</td>
-        <td>Sweden</td>
-      </tr>
-      <tr>
-        <td>Centro comercial Moctezuma</td>
-        <td>Francisco Chang</td>
-        <td>Mexico</td>
-      </tr> -->
+
     </tbody>
 
   </table>

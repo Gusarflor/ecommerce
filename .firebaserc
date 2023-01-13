@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "e-commerce-feff8": {
+      "hosting": {
+        "ecommerce": [
+          "e-commerce-feff8"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "e-commerce-feff8"
+  }
+}

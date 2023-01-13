@@ -14,7 +14,7 @@ export class MenuNavegacionComponent implements OnInit {
   estaLogueado: Boolean=false;
   role: number = 0;
 
-  declare subscription: Subscription;
+  // declare subscription: Subscription;
 
   constructor( private services: ControlService) { }
 

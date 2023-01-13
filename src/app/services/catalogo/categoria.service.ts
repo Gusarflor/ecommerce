@@ -1,7 +1,8 @@
+import { DataService } from 'src/app/services/data.service';
 import {ConfigService } from './../../config/config-service';
 import { CategoriaModel } from './../../models/catalogo/categoria.model';
 import { ControlService } from './../control.service';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -11,26 +12,28 @@ import { Observable } from 'rxjs';
 })
 export class CategoriaService {
 
-  entidad = "categoria";
+  registro = "CategoriaModel";
 
-  constructor(private http:HttpClient, private controlService:ControlService) { }
 
-  getTodosRegistros(): Observable <CategoriaModel[]>{
-    return this.http.get<CategoriaModel[]>(`${ConfigService.BASE_URL}${this.entidad}`);
+
+  constructor(private httpClient:HttpClient, private controlService:ControlService, private dataService:DataService) { }
+
+  listarCategoria(): Observable <CategoriaModel[]>{
+    return this.httpClient.get<CategoriaModel[]>(`${ConfigService.BASE_URL}${this.registro}`);
   }
 
-  guardarNuevoRegistro(registro:CategoriaModel): Observable<CategoriaModel>{
-    return this.http.post<CategoriaModel>(`${ConfigService.BASE_URL}${this.entidad}`, registro, {
+  guardarCategoria(registro:CategoriaModel): Observable<CategoriaModel>{
+    return this.httpClient.post<CategoriaModel>(`${ConfigService.BASE_URL}${this.registro}`, registro, {
     });
   }
 
-  EditarRegistro(registro:CategoriaModel): Observable<CategoriaModel>{
-    return this.http.put<CategoriaModel>(`${ConfigService.BASE_URL}${this.entidad}`, registro, {
+  EditarCategoria(registro:CategoriaModel): Observable<CategoriaModel>{
+    return this.httpClient.put<CategoriaModel>(`${ConfigService.BASE_URL}${this.registro}`, registro, {
     });
   }
 
-  EliminarRegistro(registroId:CategoriaModel): Observable<any>{
-    return this.http.delete(`${ConfigService.BASE_URL}${this.entidad}/${registroId}`, {
+  EliminarCategoria(registroId:CategoriaModel): Observable<any>{
+    return this.httpClient.delete(`${ConfigService.BASE_URL}${this.registro}/${registroId}`, {
     });
   }
 

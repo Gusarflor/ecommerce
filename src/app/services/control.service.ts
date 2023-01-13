@@ -9,7 +9,7 @@ export class ControlService {
   static role: number;
 
   getdatosUsuario() {
-    throw new Error('Method not implemented.');
+
   }
   login: any;
   logout: any;

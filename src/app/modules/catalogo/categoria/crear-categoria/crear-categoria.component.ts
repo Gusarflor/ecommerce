@@ -1,3 +1,6 @@
+
+import { CategoriaModel } from './../../../../models/catalogo/categoria.model';
+import { CategoriaService } from 'src/app/services/catalogo/categoria.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,15 +13,17 @@ export class CrearCategoriaComponent implements OnInit {
 
   fgValidator!: FormGroup;
 
-  constructor() { }
 
+  constructor(private categoriaService:CategoriaService) { }
 
+  ngOnInit(): void { }
 
-  ngOnInit(): void {
-  }
-
-  guardarNuevoRegistro(){
-
-  }
+  agregarRegistro(){
+    let crearCategoria=new CategoriaModel();
 
   }
+
+  id:String="";
+  codigo:String="";
+  nombre:String="";
+}
