@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(){
-    this.usuarioService.registrar(this.fgValidator.value)
+    this.usuarioService.loguear(this.fgValidator.value)
 
       .then(response =>{
         console.log(response);

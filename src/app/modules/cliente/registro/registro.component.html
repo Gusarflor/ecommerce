@@ -8,15 +8,16 @@
 
       <form [formGroup]="fgValidator">
 
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-6 mb-2">
+            <div class="col-md-6 mb-2">
             <div class="form-outline">
-              <div class="form-outline">
-                <i class="material-icons prefix">portrait</i>
-                <input type="text" id="documento" formControlName="documento"/>
-                <label for="documento" class="form-label">Documento</label>
-              </div>
+              <i class="material-icons prefix">email</i>
+              <input type="email" id="email" formControlName="email"/>
+              <label class="form-label" for="documento">email</label>
             </div>
+          </div>
+        </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-outline">
@@ -25,26 +26,25 @@
               <label for="Fecha de Nacimiento" class="form-label">Fecha de Nacimiento</label>
             </div>
           </div>
-        </div>
+        </div> -->
 
-        <div class="row">
-          <div class="col-md-6 mb-2">
+         <div class="col-md-6 mb-2">
             <div class="form-outline">
-              <i class="material-icons prefix">perm_identity</i>
-              <input type="text" id="nombre" formControlName="nombre"/>
-              <label class="form-label" for="nombre">Nombre</label>
+              <i class="material-icons prefix">email</i>
+              <input type="email" id="email" formControlName="email"/>
+              <label class="form-label" for="documento">email</label>
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-outline">
               <i class="material-icons prefix">person</i>
-              <input type="text" id="apellido" formControlName="apellido"/>
-              <label class="form-label" for="apellido">Apellido</label>
+              <input type="text" id="password" formControlName="password"/>
+              <label class="form-label" for="password">password</label>
             </div>
           </div>
-        </div>
+        <!-- </div> -->
 
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-12 mb-2">
             <div class="form-outline">
               <i class="material-icons prefix">gps_fixed</i>
@@ -68,19 +68,19 @@
                 <input type="tel" id="telefono" formControlName="telefono"/>
                 <label class="form-label" for="telefono">Telefono</label>
             </div>
-          </div>
-          <div class="col-md-6 mb-2">
+          </div> -->
+          <!-- <div class="col-md-6 mb-2">
             <div class="form-outline">
               <i class="material-icons prefix">email</i>
               <input type="email" id="email" formControlName="email"/>
               <label class="form-label" for="documento">email</label>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="row">
           <div class="mt-6 pt-2">
-            <button (click)="RegistrarClienteFn()">
+            <button (click)="onSubmit()">
               <input class="btn btn-secondary btn-lg" type="button" value="Registrar"/>
             </button>
           </div>
