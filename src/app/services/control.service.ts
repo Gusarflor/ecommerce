@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class ControlService {
   static role: number;
 
-  getdatosUsuario() {
+  estaLogueado() {
 
   }
   login: any;

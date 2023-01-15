@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   fgValidator!: FormGroup;
 
-  constructor(private fb: FormBuilder, private services: ControlService, private router: Router, private usuarioService:UsuarioService) { }
+  constructor(private fb: FormBuilder, private services: ControlService, private router: Router, private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
 
@@ -26,7 +26,9 @@ export class LoginComponent implements OnInit {
     this.usuarioService.loguear(this.fgValidator.value)
 
       .then(response =>{
+
         console.log(response);
+        this.router.navigate(['./home']);
 
       })
       .catch(error => console.log(error));
@@ -52,9 +54,9 @@ export class LoginComponent implements OnInit {
   //   } else {
 
 
-    //   mostrarMensaje("Sesion Iniciada...");
-    //   return false;
-    // }
+  //   mostrarMensaje("Sesion Iniciada...");
+  //   return false;
+  // }
 
 
   get fgv() {

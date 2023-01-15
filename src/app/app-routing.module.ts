@@ -1,7 +1,9 @@
+import { AppComponent } from './app.component';
 import { ControlModule } from './modules/control/control.module';
 import { DefectoComponent } from './public/home/defecto/defecto.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
 const routes: Routes = [
 
@@ -15,7 +17,11 @@ const routes: Routes = [
 
   {path:'cliente', loadChildren:()=>import('./modules/cliente/cliente.module').then(m => m.ClienteModule)},
 
-  { path:'**', redirectTo:'/home'}
+  { path:'**', redirectTo:'/home'},
+
+  {path: 'app', component:AppComponent, ...canActivate(()=>redirectUnauthorizedTo(['./cliente/registro']))},
+
+
 
 ];
 

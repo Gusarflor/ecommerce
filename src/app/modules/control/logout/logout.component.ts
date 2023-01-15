@@ -1,3 +1,5 @@
+import { error } from '@angular/compiler/src/util';
+import { UsuarioService } from 'src/app/services/usuario.service';
 import { Router } from '@angular/router';
 import { ControlService } from './../../../services/control.service';
 import { Component, OnInit } from '@angular/core';
@@ -9,12 +11,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoutComponent implements OnInit {
 
-  constructor(private service: ControlService,
-              private router: Router) { }
+  constructor(private service: ControlService, private router: Router, private usuarioService:UsuarioService) { }
+
 
   ngOnInit(): void {
-    this.service.logout();
-    this.router.navigate(['/home']);
+    // this.service.logout();
+    // this.router.navigate(['/home']);
+  }
+  onClick() {
+    this.usuarioService.logout()
+
+      .then(( )=> {
+        this.router.navigate(['./cliente/registro']);
+
+      })
+      .catch(error => console.log(error));
+
   }
 
 }

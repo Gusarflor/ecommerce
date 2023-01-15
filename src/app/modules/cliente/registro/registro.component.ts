@@ -35,13 +35,11 @@ export class RegistroComponent implements OnInit {
     this.usuarioService.registrar(this.fgValidator.value)
 
       .then(response =>{
-        console.log(
-          mostrarMensaje("Registro realilzado"));
+        console.log(response);
         this.router.navigate(['./control/login']);
 
       })
-      .catch(error => console.log(
-        mostrarMensaje("Registro erroneo")));
+      .catch(error => console.log("Registro erroneo"));
   }
 
   FormBuilding() {
