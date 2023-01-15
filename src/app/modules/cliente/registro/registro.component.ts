@@ -1,8 +1,5 @@
 import { LoginComponent } from './../../control/login/login.component';
-import { DataService } from 'src/app/services/data.service';
 import { error } from '@angular/compiler/src/util';
-import { ClienteModel } from './../../../models/cliente.model';
-import { ClienteService } from './../../../services/cliente.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -30,9 +27,12 @@ export class RegistroComponent implements OnInit {
 
     console.log(this.clienteservice.registrarCliente());
   }
+  // metodo que ejecuta el registro del formulario
 
   onSubmit(){
     this.usuarioService.registrar(this.fgValidator.value)
+
+    //promesa que se resuelvera segun validaciones
 
       .then(response =>{
         console.log(response);
@@ -46,57 +46,13 @@ export class RegistroComponent implements OnInit {
 
     this.fgValidator = this.fb.group({
 
-      // documento: ['', [Validators.required, Validators.minLength(1)]],
-      // nombre: ['', [Validators.required, Validators.minLength(1)]],
-      // apellido: ['', [Validators.required, Validators.minLength(1)]],
-      // telefono: ['', [Validators.required, Validators.minLength(7), Validators.maxLength(15)]],
-      // direccion: ['', [Validators.required, Validators.minLength(2)]],
-
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
 
     });
   }
 
-  // RegistrarClienteFn() {
 
-  //   if (this.fgValidator.invalid) {
-  //     mostrarMensaje("Registro erroneo");
-
-  //   } else {
-  //     mostrarMensaje("Registrando...");
-
-  //   let model = this.obtenerDatosCliente();
-
-      // this.clienteservice.registrarCliente(model).subscribe(
-      //   ClienteModel =>{
-      //     mostrarMensaje("Registro realilzado");
-      //   },
-
-      //   error=>{
-      //     mostrarMensaje("Registro erroneo");
-      //   }
-      // );
-
-  //   };
-  // }
-
-  // obtenerDatosCliente(): ClienteModel {
-
-  //   let model = new ClienteModel();
-
-  //   model.email = this.fgv['email'].value;
-  //   model.password = this.fgv['password'].value;
-    // model.Apellido = this.fgv['Apellido'].value;
-    // model.Direccion = this.fgv['Direccion'].value;
-    // model.Ciudad = this.fgv['Ciudad'].value;
-    // model.Telefono = this.fgv['Telefono'].value;
-    // model.email = this.fgv['email'].value;
-
-  //   return model;
-
-
-  // }
 
 
   get fgv() {
@@ -104,7 +60,3 @@ export class RegistroComponent implements OnInit {
   };
 
 }
-
-// function obtenerDatosCliente() {
-//   throw new Error('Function not implemented.');
-// }

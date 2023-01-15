@@ -46,18 +46,6 @@ export class LoginComponent implements OnInit {
   }
 
 
-  // LoginClienteFn() {
-
-  //   if (this.fgValidator.invalid) {
-  //     mostrarMensaje("Rellenar todos los campos");
-  //     return false;
-  //   } else {
-
-
-  //   mostrarMensaje("Sesion Iniciada...");
-  //   return false;
-  // }
-
 
   get fgv() {
     return this.fgValidator.controls;

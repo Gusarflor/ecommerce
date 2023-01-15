@@ -7,9 +7,12 @@ import { Auth, createUserWithEmailAndPassword, signOut, signInWithEmailAndPasswo
 })
 export class UsuarioService {
 
+
   constructor(private auth:Auth, private router:Router) { }
 
   token:string='';
+
+  //metodos para enlazar componente Control con Firebase
 
   registrar({email, password}:any){
     return createUserWithEmailAndPassword(this.auth, email, password);

@@ -10,24 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BarraNavegacionComponent implements OnInit {
 
-  // estaLogueado: Boolean=false;
-  // role: number = 0;
 
   constructor(private services: ControlService, private usuarioService:UsuarioService, private router:Router) { }
 
   ngOnInit(): void {
 
   }
-
-  // onClick() {
-  //   this.usuarioService.logout()
-
-  //     .then(( )=> {
-  //       this.router.navigate(['./cliente/registro']);
-
-  //     })
-  //     .catch(error => console.log(error));
-
-  // }
 
 }

@@ -11,6 +11,7 @@ export class ControlService {
   estaLogueado() {
 
   }
+  //establecer funciones para login y logout
   login: any;
   logout: any;
 

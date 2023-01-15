@@ -14,7 +14,7 @@ export class DataService {
 
   constructor() { }
 
-  //creamos método para enlazar categoria con nuestra base de datos.
+  //creamos métodos para enlazar categoria con nuestra base de datos.
 
   AlmacenarCategoria(registro:CategoriaModel[]){
     return this.httpClient.get('https://nuevo-ecommerce-default-rtdb.europe-west1.firebasedatabase.app/datos.json');
@@ -36,7 +36,7 @@ export class DataService {
 // )};
 
 registrarCliente(registro:ClienteModel[]){
-  this.httpClient.put('mongodb+srv://Administrador1:<admin1>@proyectoecommerce.eoqporp.mongodb.net/?retryWrites=true&w=majority', registro).subscribe(
+  this.httpClient.put('https://nuevo-ecommerce-default-rtdb.europe-west1.firebasedatabase.app/datos.json', registro).subscribe(
     (response: string)=>console.log("se han almacenado los registros" + response),
     (error: string) => console.log("Error" + error),
   )

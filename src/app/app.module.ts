@@ -16,6 +16,7 @@ import { FooterComponent } from './public/paginaPrincipal/footer/footer.componen
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
+import { MiCuentaComponent } from './public/home/mi-cuenta/mi-cuenta.component';
 
 
 
@@ -26,7 +27,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     DefectoComponent,
     FooterComponent,
     BarraNavegacionComponent,
-    MenuNavegacionComponent
+    MenuNavegacionComponent,
+    MiCuentaComponent
 
   ],
   imports: [
