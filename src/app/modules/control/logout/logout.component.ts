@@ -22,7 +22,7 @@ export class LogoutComponent implements OnInit {
     this.usuarioService.logout()
 
       .then(( )=> {
-        this.router.navigate(['./cliente/registro']);
+        this.router.navigate(['./home/defecto']);
 
       })
       .catch(error => console.log(error));

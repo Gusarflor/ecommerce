@@ -108,4 +108,3 @@ export class RegistroComponent implements OnInit {
 // function obtenerDatosCliente() {
 //   throw new Error('Function not implemented.');
 // }
-
