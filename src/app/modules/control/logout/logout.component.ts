@@ -1,4 +1,3 @@
-import { error } from '@angular/compiler/src/util';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { Router } from '@angular/router';
 import { ControlService } from './../../../services/control.service';

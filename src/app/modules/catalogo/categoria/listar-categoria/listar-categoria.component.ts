@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { CategoriaModel } from './../../../../models/catalogo/categoria.model';
 import { Component, OnInit } from '@angular/core';
 import { CategoriaService } from 'src/app/services/catalogo/categoria.service';
@@ -14,7 +15,7 @@ export class ListarCategoriaComponent implements OnInit {
 
   listadoRegistros!: CategoriaModel[];
 
-  constructor(private services:CategoriaService) { }
+  constructor(private services:CategoriaService, private router:Router, ) { }
 
   ngOnInit(): void {
 
@@ -37,8 +38,10 @@ export class ListarCategoriaComponent implements OnInit {
 
 
   }
+
   page:number = 1;
-  collection: any[] = [];
+  registro: any[] = [];
+
 
 }
 

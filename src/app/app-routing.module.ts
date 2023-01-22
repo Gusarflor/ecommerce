@@ -19,7 +19,7 @@ const routes: Routes = [
 
   { path:'**', redirectTo:'/home'},
 
-  {path: 'app', component:AppComponent, ...canActivate(()=>redirectUnauthorizedTo(['./cliente/registro']))},
+  {path: 'home', component:DefectoComponent, ...canActivate(()=>redirectUnauthorizedTo(['./cliente/registro']))},
 
 
 
